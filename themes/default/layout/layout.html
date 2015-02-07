@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>{{page.Title}}</title>
+    <link rel="stylesheet" type="text/css" href="{{config.url}}/themes/{{config.theme}}/css/semantic.css">
+
+    {% endblock %}
+</head>
+<body>
+    <div class="ui  page grid masthead segment">
+        <div class="column">
+            <div class="ui secondary pointing menu">
+                <a class="active item" href="./index">
+                    <i class="home icon"></i> 主页
+                </a>
+                <a class="item" href="./works">
+                    <i class="file text icon"></i> 作业
+                </a>
+                <a class="item" href="./friend">
+                    <i class="user icon"></i> 朋友们
+                </a>
+                <div class="right menu">
+                    <div class="item">
+                        <div class="ui icon input">
+                            <input placeholder="搜索中..." type="text">
+                            <i class="search link icon"></i>
+                        </div>
+                    </div>
+                    <a class="ui item" href="./login">
+                        登录
+                    </a>
+                </div>
+            </div>
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="ui  page grid masthead segment">
+            <div class="column">
+                <div class="ui horizontal icon divider">
+                    <i class="circular heart icon"></i>
+                </div>
+                 <p>© Copyright {{config.title}}</p>
+            </div>
+        </div>
+    </footer>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+<script src="{{config.url}}/themes/{{config.theme}}/js/semantic.js"></script>
+</body>
+</html>
