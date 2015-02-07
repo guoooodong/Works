@@ -1,0 +1,23 @@
+{
+  "name":"Works",
+  "type":"Web App",
+  "description":"Release and submission of work",
+  "keywords":["work", "rest", "mvc", "submission", "system"],
+  "license":"MIT",
+  "authors":[
+    {
+      "name":"guodong"
+    }
+  ],
+  "require":{
+    "php":">=5.3.0",
+    "slim/slim":"2.*",
+    "slim/views":"0.1.*",
+    "twig/twig":"1.*"
+  },
+  "autoload":{
+    "psr-0":{
+      "": ""
+    }
+  }
+}
