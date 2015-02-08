@@ -1,6 +1,7 @@
 {
   "Slug": "index",
+  "Name":"Index",
   "Title": "Works's Index",
   "Description": "This is works index",
-  "Content": "<h1>这是首页</h1>"
+  "Content": "<h2>这是Works首页</h2><p><br/>Works是一个发布作业和提交作业的Web APP<br/>"
 }

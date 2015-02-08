@@ -41,7 +41,9 @@ class Start{
             $app->render('404.html',$twig_vars);
         });
 
-        //PUBLIC
+        /**
+         * PUBLIC
+         */
         $app->get('/',
             function () use ($app){
                 $twig_vars = $app->config('twigVars');
@@ -52,6 +54,28 @@ class Start{
                 $app->render('index.html',$twig_vars);
             }
         );
+        // Page
+        $app->get('/:slug', function ($slug) use ($app) {
+            $twig_vars = $app->config('twigVars');
+            $config = $twig_vars['config'];
+            if ($slug == "index")
+                $app->redirect($config['url']);
+            if (isset($twig_vars['pages'][$slug]))
+                $page = $twig_vars['pages'][$slug];
+            else
+                $app->notFound();
+            if (isset($page)) {
+                $twig_vars['page'] = $page;
+                (isset($page['Template']) && $page['Template']!="") ? $template = "templates/".$page['Template']
+                    : $template = "page.html";
+                if (file_exists ($app->config('templates.path').$template))
+                    $app->render($template, $twig_vars);
+                else
+                    echo "The template: ".$template. " doen't exist into the theme: ". $config['theme'];
+            } else {
+                $app->notFound();
+            }
+        });
         $app->get('/login',
             function () use ($app){
                 $app->render('login.php');

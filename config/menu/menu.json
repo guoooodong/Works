@@ -1,0 +1,22 @@
+{
+  "index": {
+    "name": "Index",
+    "link": "http://localhost/Works/index.php/index",
+    "icon": "icon home"
+  },
+  "works": {
+    "name": "Works",
+    "link": "http://localhost/Works/index.php/works",
+    "icon":"file text icon"
+  },
+  "friend": {
+    "name": "Friends",
+    "link": "http://localhost/Works/index.php/friend",
+    "icon":"users icon"
+  },
+  "blog": {
+    "name": "Blog",
+    "link": "http://localhost/Works/index.php/blog",
+    "icon":"globe icon"
+  }
+}

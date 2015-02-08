@@ -1,0 +1,7 @@
+{
+  "Slug": "blog",
+  "Name":"Blog",
+  "Title": "Works's blog",
+  "Description": "This is works blog",
+  "Content": "<h2>这是WorksBlog</h2><p><br/>Works是一个发布作业和提交作业的Web APP<br/>"
+}

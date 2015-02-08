@@ -78,11 +78,11 @@ class SlimConfig {
         foreach($files as $file){
             if($file->isFile()){
                 $menu = Json::read("config/".$folder."/".$file->getFilename());
-                $fileNames[str_replace(".json", "", $file->getFilename())] = $menu;
+                $fileNames = $menu;
             }
         }
         if (isset($fileNames))
-            return $fileNames;
+            return array_reverse(array_reverse($fileNames));
         else
             return "";
     }
